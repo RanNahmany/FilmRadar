@@ -1,5 +1,7 @@
 module.exports = {
   // parser: 'babel-eslint',
+  // "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+
   settings: {
     react: {
       version: 'detect',
@@ -27,6 +29,8 @@ module.exports = {
     'react',
   ],
   rules: {
+    'import/no-extraneous-dependencies': 0,
+    // 'indent': DisabledByDefault,
     'import/no-cycle': 0,
     'no-console': 0,
     'react/prop-types': 0,
