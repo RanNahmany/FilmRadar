@@ -15,6 +15,6 @@ export const useStyles = createUseStyles(() => ({
     padding: '2em',
   },
   toolbar: {
-    minHeight: '70px',
+    height: '80px',
   },
 }));

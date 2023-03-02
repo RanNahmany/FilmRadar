@@ -1,13 +1,12 @@
 import React from 'react';
 
 function MovieInformation() {
-    
-    console.log('MovieInformation');
-    return (
+  console.log('MovieInformation');
+  return (
     <div>
-        MovieInformation
+      MovieInformation
     </div>
-    );
+  );
 }
 
 export default MovieInformation;

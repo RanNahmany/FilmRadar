@@ -1,13 +1,12 @@
 import React from 'react';
 
 function Movies() {
-    
-    console.log('Movies');
-    return (
+  console.log('Movies');
+  return (
     <div>
-        Movies
+      Movies
     </div>
-    );
+  );
 }
 
 export default Movies;
