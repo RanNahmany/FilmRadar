@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import App from './components/App';
 
@@ -13,7 +13,17 @@ import App from './components/App';
 //   document.getElementById('root'),
 // );
 
-const theme = createTheme({});
+// const theme = createTheme({});
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#283593',
+    },
+    secondary: {
+      main: '#1c6bc0',
+    },
+  },
+});
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
