@@ -10,6 +10,7 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    node: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -29,8 +30,13 @@ module.exports = {
     'react',
   ],
   rules: {
+    // 'airbnb/indent': off,
+    // indent: [2, 'tab', { SwitchCase: 1, VariableDeclarator: 1 }],
+    // 'no-tabs': 0,
+    // 'react/jsx-indent': [2, 'tab'],
+    // 'react/jsx-indent-props': [2, 'tab'],
     'import/no-extraneous-dependencies': 0,
-    // "react/jsx-indent": ["error", tab],
+    'react/jsx-uses-react': 'off',
     'import/no-cycle': 0,
     'no-console': 0,
     'react/prop-types': 0,
@@ -52,5 +58,4 @@ module.exports = {
     'no-sparse-arrays': 0,
     'no-array-index-key': 0,
     camelcase: 0,
-  },
-};
+  } };

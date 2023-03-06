@@ -1,19 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+import { Provider } from 'react-redux';
+import { store } from './app/store';
+
 import App from './components/App';
 
-// ReactDOM.render(
-//   <BrowserRouter>
-//     <App />
-//   </BrowserRouter>,
-//   document.getElementById('root'),
-// );
-
-// const theme = createTheme({});
 const theme = createTheme({
   palette: {
     primary: {
@@ -25,11 +20,15 @@ const theme = createTheme({
   },
 });
 
-ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </ThemeProvider>,
-  document.getElementById('root'),
+const container = document.getElementById('app');
+const root = createRoot(container);
+
+root.render(
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
+  </Provider>,
 );

@@ -6,9 +6,17 @@ export const useStyles = createUseStyles(() => ({
     display: 'flex',
     justifyContent: 'center',
     padding: '10% 0',
+    filter: 'brightness(1.2)',
+    '&:hover': {
+      cursor: 'pointer',
+      textDecoration: 'none',
+      transform: 'scale(1.02)',
+    },
   },
   image: {
-    width: '30%',
+    width: '60%',
+    height: 'auto',
+    borderRadius: '10px',
   },
   links: {
     // color: theme.palette.text.primary,

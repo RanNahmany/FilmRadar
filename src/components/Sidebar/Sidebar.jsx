@@ -19,8 +19,9 @@ const genres = [
   { name: 'Romance', value: 'romance', link: '/romance' },
 ];
 
-const darkModeLogo = '/light-logo.png';
-const lightModeLogo = '/dark-logo.png';
+// todo - change the example logo to something else
+const darkModeLogo = '/filmradar-logo-white.png';
+const lightModeLogo = '/filmradar-logo-black.png';
 
 function Sidebar({ setDesktopOpen }) {
   const theme = useTheme();
@@ -40,6 +41,7 @@ function Sidebar({ setDesktopOpen }) {
         <Link key={aiItem.value} className={classes.links} to="/">
           <ListItemButton href={aiItem.link}>
             <ListItemIcon>
+              {/* fix -  */}
               <img src="https://img.icons8.com/ios/256/artificial-intelligence.png" className={classes.genreImages} height="30" />
             </ListItemIcon>
             <ListItemText primary={aiItem.name} secondary="The Official AI Tool" />
@@ -53,7 +55,7 @@ function Sidebar({ setDesktopOpen }) {
           <Link key={value} className={classes.links} to="/">
             <ListItemButton href={link}>
               <ListItemIcon>
-                <img src={darkModeLogo} className={classes.genreImages} height="30" />
+                <img src={lightModeLogo} className={classes.genreImages} height="30" />
               </ListItemIcon>
               <ListItemText primary={name} />
             </ListItemButton>
