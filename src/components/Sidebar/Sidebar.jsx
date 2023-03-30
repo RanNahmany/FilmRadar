@@ -39,7 +39,7 @@ function Sidebar({ setDesktopOpen }) {
       <Divider />
       <List>
         <Link key={aiItem.value} className={classes.links} to="/">
-          <ListItemButton href={aiItem.link}>
+          <ListItemButton>
             <ListItemIcon>
               {/* fix -  */}
               <img src="https://img.icons8.com/ios/256/artificial-intelligence.png" className={classes.genreImages} height="30" />
@@ -52,7 +52,7 @@ function Sidebar({ setDesktopOpen }) {
       <Divider />
       <List>
         {menuItems.map(({ name, value, link }) => (
-          <Link key={value} className={classes.links} to="/">
+          <Link key={value} className={classes.links} to={link}>
             <ListItemButton href={link}>
               <ListItemIcon>
                 <img src={lightModeLogo} className={classes.genreImages} height="30" />
@@ -68,8 +68,8 @@ function Sidebar({ setDesktopOpen }) {
           Genres
         </ListSubheader>
         {genres.map(({ name, value, link }) => (
-          <Link key={value} className={classes.links} to="/">
-            <ListItemButton href={link}>
+          <Link key={value} className={classes.links} to={link}>
+            <ListItemButton>
               <ListItemIcon>
                 <img src={darkModeLogo} className={classes.genreImages} height="30" />
               </ListItemIcon>

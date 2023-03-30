@@ -8,7 +8,19 @@ import { MovieList } from '..';
 
 function Movies() {
   console.log('Movies');
-  const { data, error, isFetching } = useGetMoviesQuery();
+  const { data, error, isFetching, isError } = useGetMoviesQuery();
+
+  // Catch if there's an error
+  if (isError) {
+    console.log(error);
+    return (
+      <Box disaply="flex" alignItems="center" mt="20px">
+        <Typography variant="h4">
+          Pleate try again later.
+        </Typography>
+      </Box>
+    );
+  }
 
   if (isFetching) {
     return (
@@ -29,9 +41,18 @@ function Movies() {
       </Box>
     );
   }
+  console.log('error');
 
-  if (error) {
-    return 'an internal error has occured';
+  if (isError) {
+    // return 'an internal error has occured';
+    console.log(error);
+    return (
+      <Box disaply="flex" alignItems="center" mt="20px">
+        <Typography variant="h4">
+          Pleate try again later.
+        </Typography>
+      </Box>
+    );
   }
 
   return (
